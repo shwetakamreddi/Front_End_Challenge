@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import SearchBar from './SearchBar'
+import CardList from './CardList'
+import Nomination from "./Nomination"
+export default function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+      <div className="d-flex flex-column align-center text-center m-5">
+        <h2 className="text-center">Movie Nomination Blog</h2>
+        <SearchBar/>
+        <Nomination/>
+        <CardList/>
+      </div>
+      </div>
     </div>
-  );
+  )
 }
-
-export default App;
